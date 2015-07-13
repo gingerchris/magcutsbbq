@@ -1,0 +1,23 @@
+<div class="insta_item">
+	<a href="{{link}}" target="_blank">
+		{{^videos}}
+			<img src="{{images.low_resolution.url}}" alt="{{caption.text}}" />
+		{{/videos}}
+		{{#videos}}
+			<video autoplay loop>
+				<source src="{{videos.low_resolution.url}}" type="video/mp4">
+			</video>
+		{{/videos}}
+		{{#caption.text}}
+			<div class="insta_item__caption">
+				{{caption.text}}
+			</div>
+		{{/caption.text}}
+		{{#location.name}}
+			<div class="insta_item__location">
+				{{location.name}}
+			</div>
+		{{/location.name}}
+		<img class="overlay" src="magnificent_cuts.gif" />
+	</a>
+</div>

@@ -1,0 +1,15 @@
+{
+  "name": "MagCutsBBQ",
+  "version": "1.0.0",
+  "description": "Magnificent Cuts BBQ Team Website",
+  "main": "index.html",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-connect": "*",
+    "gulp-hogan": "^1.2.0",
+    "gulp-ruby-sass": "*",
+    "gulp-sourcemaps": "*"
+  }
+}

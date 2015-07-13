@@ -1,0 +1,139 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'francois';
+  src: url("font/francoisone-webfont.eot");
+  src: url("font/francoisone-webfont.eot?#iefix") format("embedded-opentype"), url("font/francoisone-webfont.woff2") format("woff2"), url("font/francoisone-webfont.woff") format("woff"), url("font/francoisone-webfont.ttf") format("truetype"), url("font/francoisone-webfont.svg#francois_oneregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  font-family: 'francois'; }
+
+#gallery {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+header, footer {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.7); }
+
+header {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 5px 0;
+  text-transform: uppercase; }
+
+footer {
+  top: 0;
+  left: 0; }
+  footer img {
+    position: absolute;
+    width: 100%; }
+
+h1, p {
+  display: inline-block; }
+
+h1 {
+  font-size: 2em;
+  margin-top: 0.2em; }
+
+p {
+  margin: 0.4em 0; }
+
+.insta_item {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 15%;
+  position: relative; }
+  .insta_item img, .insta_item video {
+    width: 100%;
+    display: block; }
+  .insta_item img.overlay {
+    position: absolute;
+    top: 0;
+    opacity: 0.3;
+    transition: opacity 0.5s;
+    pointer-events: none; }
+  .insta_item__caption, .insta_item__location {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s; }
+  .insta_item__caption {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    left: 10px;
+    right: 10px;
+    padding: 10px 5px; }
+  .insta_item__location {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 10px 5px 0;
+    text-align: right;
+    font-size: 12px; }
+  .insta_item:hover .insta_item__caption, .insta_item:hover .insta_item__location {
+    opacity: 1; }
+  .insta_item:hover .overlay {
+    opacity: 0; }
+
+@media (max-width: 1100px) {
+  .insta_item {
+    min-width: 20%; } }
+@media (max-width: 900px) {
+  .insta_item {
+    min-width: 25%; } }
+@media (max-width: 400px) {
+  .insta_item {
+    min-width: 33%; } }
