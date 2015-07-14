@@ -50,13 +50,11 @@ table {
 body {
   font-family: 'francois'; }
 
-#gallery {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0; }
 
 header, footer {
   position: fixed;
@@ -69,6 +67,11 @@ header {
   text-align: center;
   padding: 5px 0;
   text-transform: uppercase; }
+  header p {
+    float: right;
+    margin: 10px 20px; }
+  header p:first-of-type {
+    float: left; }
 
 footer {
   top: 0;
@@ -88,10 +91,8 @@ p {
   margin: 0.4em 0; }
 
 .insta_item {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  min-width: 15%;
+  float: left;
+  width: calc(100% / 6);
   position: relative; }
   .insta_item img, .insta_item video {
     width: 100%;
@@ -130,10 +131,12 @@ p {
 
 @media (max-width: 1100px) {
   .insta_item {
-    min-width: 20%; } }
+    width: calc(100%/5); } }
 @media (max-width: 900px) {
   .insta_item {
-    min-width: 25%; } }
+    width: calc(100%/4); } }
 @media (max-width: 400px) {
   .insta_item {
-    min-width: 33%; } }
+    width: calc(100%/3); }
+    .insta_item__location {
+      display: none; } }

@@ -18,6 +18,6 @@
 				{{location.name}}
 			</div>
 		{{/location.name}}
-		<img class="overlay" src="magnificent_cuts.gif" />
+		<img class="overlay" src="magnificent_cuts.png" />
 	</a>
 </div>
